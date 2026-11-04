@@ -16,15 +16,16 @@ def run():
  q=vec(.001);qh=vec(-.001);docs=[vec(.01),vec(-.01)]
  a={'query_cosine':dot(q,qh),'reference_scores':[dot(q,d) for d in docs],'mapped_scores':[dot(qh,d) for d in docs]}
  assert order(a['reference_scores'])[0]==0 and order(a['mapped_scores'])[0]==1
- # B: finite-anchor counterpart matching cannot guarantee out-of-support query transfer.
+ # B: perfect same-item matching across a finite anchor pool says nothing about an unseen query.
+ # Identity map on document anchors; held-out query is mapped to the wrong side.
  anchors=[vec(0),vec(math.pi/2),vec(math.pi)]
  b={'anchor_counterpart_top1':sum(order([dot(x,y) for y in anchors])[0]==i for i,x in enumerate(anchors))/3,'heldout_query_reference_top1':0,'heldout_query_mapped_top1':1,'reference_query':vec(.1),'mapped_query':vec(1.4)}
  assert order([dot(b['reference_query'],d) for d in anchors])[0]==0
  assert order([dot(b['mapped_query'],d) for d in anchors])[0]==1
- # C: monotone score mapping preserves ranking but not a fixed threshold.
+ # C: monotone score mapping preserves ranking but invalidates a reused threshold.
  s=[.9,.7,.2];mapped=[x/2 for x in s];c={'old_scores':s,'new_scores':mapped,'threshold':.8,'old_accepts':sum(x>=.8 for x in s),'new_accepts':sum(x>=.8 for x in mapped)}
  assert order(s)==order(mapped) and c['old_accepts']!=c['new_accepts']
- # D: homogeneous endpoints retrieve the positive, a mixed gallery does not.
+ # D: both homogeneous endpoints retrieve the positive; a mixed gallery does not.
  oldq=vec(.45);newq=vec(0);old=[vec(.45),vec(.65)];new=[vec(.10),vec(.20)]
  d={'old_old_scores':[dot(oldq,x) for x in old],'new_new_scores':[dot(newq,x) for x in new],'new_old_scores':[dot(newq,x) for x in old],'mixed_scores':[dot(newq,old[0]),dot(newq,new[1])]}
  assert order(d['old_old_scores'])[0]==order(d['new_new_scores'])[0]==order(d['new_old_scores'])[0]==0
@@ -45,8 +46,6 @@ def run():
   max_ratio=max(max_ratio,err/bound)
   cases.append({'case':i,'dimension':dim,'epsilon_q':eq,'epsilon_d':ed,'bound':bound,'max_score_error':err,'top3_gap':gap,'certified':certified,'top3_stable':stable})
  out={'provenance':'All vectors are constructed. No pretrained model, real query corpus, or deployment was evaluated.','examples':{'A':a,'B':b,'C':c,'D':d},'randomized_checks':{'seed':20261104,'instances':n,'certified_top3':cert,'uncertified_top3_changes':flips,'maximum_score_error_to_bound_ratio':max_ratio,'violations':0}}
- (B/'evidence').mkdir(exist_ok=True)
- (B/'evidence/constructed_results.json').write_text(json.dumps(out,indent=2))
- (B/'evidence/randomized_cases.json').write_text(json.dumps(cases,separators=(',',':')))
+ (B/'evidence/constructed_results.json').write_text(json.dumps(out,indent=2));(B/'evidence/randomized_cases.json').write_text(json.dumps(cases,separators=(',',':')))
  print(json.dumps(out,indent=2))
 if __name__=='__main__':run()

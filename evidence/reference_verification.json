@@ -1,0 +1,184 @@
+[
+  {
+    "reference": 1,
+    "title": "Towards Backward-Compatible Representation Learning",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "CVPR, pp. 6368-6377 (2020)",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 2,
+    "title": "Learning Backward Compatible Embeddings",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "2206.03040v1 [stat.ML] 7 Jun 2022",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 3,
+    "title": "Hot-Refresh Model Upgrades with Regression-Alleviating Compatible Training in Image Retrieval",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "2201.09724v1 [cs.CV] 24 Jan 2022",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 4,
+    "title": "Towards Universal Backward-Compatible Representation Learning",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "IJCAI, pp. 1615-1621; doi:10.24963/ijcai.2022/225",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 5,
+    "title": "Vec2Vec: A Compact Neural Network Approach for Transforming Text Embeddings with High Fidelity",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "arXiv:2306.12689, preprint (2023)",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 6,
+    "title": "Harnessing the Universal Geometry of Embeddings",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "2505.12540v4 [cs.LG] 26 Jan 2026",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 7,
+    "title": "mini-vec2vec: Scaling Universal Geometry Alignment with Linear Transformations",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "2510.02348v4 [cs.CL] 17 Feb 2026",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 8,
+    "title": "Multi-modal Knowledge Preserving Adapter for Embedding Backward Compatibility",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "2609.16875v1 [cs.CV] 15 Sep 2026",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 9,
+    "title": "Learning Along the Arrow of Time: Hyperbolic Geometry for Backward-Compatible Representation Learning",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "ICML, PMLR 267:5842-5855 (2025)",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 10,
+    "title": "Shared Geometry As A Rosetta Stone: Cross-Modal Alignment Without Paired Data",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "2610.09411v2 [cs.LG] 8 Oct 2026",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 11,
+    "title": "Forward Compatible Training for Large-Scale Embedding Retrieval Systems",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "CVPR (2022)",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 12,
+    "title": "Learning Compatible Embeddings",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "ICCV (2021)",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 13,
+    "title": "Does Your Agent\u2019s Memory Survive a Model Upgrade? A Controlled Study of Memory Portability",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "2609.05339v1 [cs.AI] 4 Sep 2026",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 14,
+    "title": "Mapping Similarity Spaces across Embedding Models with Synthetic Query Probing",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "2608.05857v1 [cs.CL] 6 Aug 2026",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 15,
+    "title": "Exploiting Residual Reachability for Cross-Model Migration of Graph-Based Indexes in Approximate Nearest Neighbor Search",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "2609.23036v1 [cs.DB] 19 Sep 2026",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 16,
+    "title": "lambda-Orthogonality Regularization for Compatible Representation Learning",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "2509.16664v2 [cs.LG] 20 Oct 2025",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 17,
+    "title": "Spherical Interpolation for Backward-Compatible Multimodal Representations",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "2609.39836v1 [cs.CV] 30 Sep 2026",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 18,
+    "title": "CL2R: Compatible Lifelong Learning Representations",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "2211.09032v1 [cs.CV] 16 Nov 2022",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 19,
+    "title": "Query Drift Compensation: Enabling Compatibility in Continual Learning of Retrieval Embedding Models",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "2506.00037v2 [cs.IR] 5 Oct 2025",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 20,
+    "title": "FastFill: Efficient Compatible Model Update",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "2303.04766v1 [cs.CV] 8 Mar 2023",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 21,
+    "title": "The Platonic Representation Hypothesis",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "ICML 2024; inspected arXiv:2405.07987v5",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 22,
+    "title": "MTEB: Massive Text Embedding Benchmark",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "EACL 2023; inspected arXiv:2210.07316v3",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 23,
+    "title": "BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+    "verification": "Downloaded primary full text inspected; identity and bibliographic details checked against the first pages and available primary publication records.",
+    "version": "NeurIPS 2021; inspected arXiv:2104.08663v4",
+    "caution": "No independent replication or claim of peer-review status beyond explicitly identified venue."
+  },
+  {
+    "reference": 24,
+    "title": "Migrate to a New Embedding Model",
+    "verification": "Official product documentation retrieved and read with web service on 4 November 2026.",
+    "url": "https://qdrant.tech/documentation/tutorials-operations/embedding-model-migration/",
+    "caution": "Live documentation snapshot; not research or independent vendor validation."
+  },
+  {
+    "reference": 25,
+    "title": "Migrate to a New Embedding Model",
+    "verification": "Official product documentation retrieved and read with web service on 4 November 2026.",
+    "url": "https://docs.zilliz.com/docs/migrate-to-a-new-embedding-model",
+    "caution": "Live documentation snapshot; not research or independent vendor validation."
+  },
+  {
+    "reference": 26,
+    "title": "Migrate to a New Embedding Model",
+    "verification": "Official product documentation retrieved and read with web service on 4 November 2026.",
+    "url": "https://www.mongodb.com/docs/voyageai/tutorials/migrate-embedding-model/",
+    "caution": "Live documentation snapshot; not research or independent vendor validation."
+  }
+]

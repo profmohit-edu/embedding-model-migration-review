@@ -1,0 +1,209 @@
+[
+  {
+    "id": "R01",
+    "reference": 1,
+    "title": "Towards Backward-Compatible Representation Learning",
+    "source_url": "https://openaccess.thecvf.com/content_CVPR_2020/html/Shen_Towards_Backward-Compatible_Representation_Learning_CVPR_2020_paper.html",
+    "sha256": "6136722ccbfe09a0ea35879a55d5446343e6d59c6d990ca59fd5196c733a5dca",
+    "bytes": 608643,
+    "redistributed": false
+  },
+  {
+    "id": "R02",
+    "reference": 2,
+    "title": "Learning Backward Compatible Embeddings",
+    "source_url": "https://arxiv.org/abs/2206.03040",
+    "sha256": "12668e92c148a79739ea1b3003435ef9a048f51a8ae0c5f13f8d990aa1ec0596",
+    "bytes": 998903,
+    "redistributed": false
+  },
+  {
+    "id": "R03",
+    "reference": 3,
+    "title": "Hot-Refresh Model Upgrades with Regression-Alleviating Compatible Training in Image Retrieval",
+    "source_url": "https://arxiv.org/abs/2201.09724",
+    "sha256": "8a8a87ed0e886e1b2d3375be8071e1b0939a0bf8e90a84a7e51aa5ac9ec878c6",
+    "bytes": 4615146,
+    "redistributed": false
+  },
+  {
+    "id": "R04",
+    "reference": 4,
+    "title": "Towards Universal Backward-Compatible Representation Learning",
+    "source_url": "https://www.ijcai.org/proceedings/2022/225",
+    "sha256": "c4e29cdb8f54881b2f04c657d47ae6e62d3a3bf99c58170e01f7fbd368672572",
+    "bytes": 847711,
+    "redistributed": false
+  },
+  {
+    "id": "R05",
+    "reference": 5,
+    "title": "Vec2Vec: A Compact Neural Network Approach for Transforming Text Embeddings with High Fidelity",
+    "source_url": "https://arxiv.org/abs/2306.12689",
+    "sha256": "16fd649a204d35ea3a28f2f95e00b2d4f43611fc014fc5d6a0ff809a766dcbac",
+    "bytes": 706607,
+    "redistributed": false
+  },
+  {
+    "id": "R06",
+    "reference": 6,
+    "title": "Harnessing the Universal Geometry of Embeddings",
+    "source_url": "https://arxiv.org/abs/2505.12540",
+    "sha256": "c545946573295e7f804dd59e3b763184d96e1b82da293d6a485d8b3a993bb696",
+    "bytes": 2896167,
+    "redistributed": false
+  },
+  {
+    "id": "R07",
+    "reference": 7,
+    "title": "mini-vec2vec: Scaling Universal Geometry Alignment with Linear Transformations",
+    "source_url": "https://arxiv.org/abs/2510.02348",
+    "sha256": "a3303560f4e58b8d294f654d68745cac24db96645be3b7d448b241a9804de990",
+    "bytes": 538966,
+    "redistributed": false
+  },
+  {
+    "id": "R08",
+    "reference": 8,
+    "title": "Multi-modal Knowledge Preserving Adapter for Embedding Backward Compatibility",
+    "source_url": "https://arxiv.org/abs/2609.16875",
+    "sha256": "c1f2428d0b87c5ca0353f1d4043dce81a5e45aa62203db649923267411fb3089",
+    "bytes": 1012563,
+    "redistributed": false
+  },
+  {
+    "id": "R09",
+    "reference": 9,
+    "title": "Learning Along the Arrow of Time: Hyperbolic Geometry for Backward-Compatible Representation Learning",
+    "source_url": "https://proceedings.mlr.press/v267/bui25b.html",
+    "sha256": "dfb67e72d7fab8a89eb51ee260ee2d2c5a302ebb7fe97cfcbab7744493c2de3d",
+    "bytes": 8431082,
+    "redistributed": false
+  },
+  {
+    "id": "R10",
+    "reference": 10,
+    "title": "Shared Geometry As A Rosetta Stone: Cross-Modal Alignment Without Paired Data",
+    "source_url": "https://arxiv.org/abs/2610.09411",
+    "sha256": "9d830304226320a628781caa0e9e64f549f9a6e3c4720d1464a08093e2955676",
+    "bytes": 14435053,
+    "redistributed": false
+  },
+  {
+    "id": "R16",
+    "reference": 11,
+    "title": "Forward Compatible Training for Large-Scale Embedding Retrieval Systems",
+    "source_url": "https://openaccess.thecvf.com/content/CVPR2022/html/Ramanujan_Forward_Compatible_Training_for_Large-Scale_Embedding_Retrieval_Systems_CVPR_2022_paper.html",
+    "sha256": "d59cb2c5292d5d1b97c054d9c3969eabe01bb0a4577280cd1fb25ccacf767afc",
+    "bytes": 775294,
+    "redistributed": false
+  },
+  {
+    "id": "R17",
+    "reference": 12,
+    "title": "Learning Compatible Embeddings",
+    "source_url": "https://openaccess.thecvf.com/content/ICCV2021/html/Meng_Learning_Compatible_Embeddings_ICCV_2021_paper.html",
+    "sha256": "5e32c0cf32bc03328eac2880398a2be31d2a281a453d920ffe7bae291a459593",
+    "bytes": 920946,
+    "redistributed": false
+  },
+  {
+    "id": "R18",
+    "reference": 13,
+    "title": "Does Your Agent\u2019s Memory Survive a Model Upgrade? A Controlled Study of Memory Portability",
+    "source_url": "https://arxiv.org/abs/2609.05339",
+    "sha256": "77b98a7d4597de14788b7c98a561925a936d8e39dd450d948eda36cf614e0b5f",
+    "bytes": 4052627,
+    "redistributed": false
+  },
+  {
+    "id": "R19",
+    "reference": 14,
+    "title": "Mapping Similarity Spaces across Embedding Models with Synthetic Query Probing",
+    "source_url": "https://arxiv.org/abs/2608.05857",
+    "sha256": "361763d2ca076ef2b5fbbf1ff3beff9ff89c3babdd3a7c5e6093259275c2c8f2",
+    "bytes": 6688138,
+    "redistributed": false
+  },
+  {
+    "id": "R20",
+    "reference": 15,
+    "title": "Exploiting Residual Reachability for Cross-Model Migration of Graph-Based Indexes in Approximate Nearest Neighbor Search",
+    "source_url": "https://arxiv.org/abs/2609.23036",
+    "sha256": "6d6ad176e67033e643dec24a6b78b9948cd491f678ea5ff8c5bab0d91e5ae6dc",
+    "bytes": 1137235,
+    "redistributed": false
+  },
+  {
+    "id": "R21",
+    "reference": 16,
+    "title": "lambda-Orthogonality Regularization for Compatible Representation Learning",
+    "source_url": "https://arxiv.org/abs/2509.16664",
+    "sha256": "44d0097fe79cffbc22f9fa4c33ac025a34dd7b13773d38d125ca6b069866bfb9",
+    "bytes": 2630922,
+    "redistributed": false
+  },
+  {
+    "id": "R22",
+    "reference": 17,
+    "title": "Spherical Interpolation for Backward-Compatible Multimodal Representations",
+    "source_url": "https://arxiv.org/abs/2609.39836",
+    "sha256": "239b97835119ada4581666a9daa0772c9600cbbe5e72e52ba1d5f6f5c0a2a2fb",
+    "bytes": 1171878,
+    "redistributed": false
+  },
+  {
+    "id": "R23",
+    "reference": 18,
+    "title": "CL2R: Compatible Lifelong Learning Representations",
+    "source_url": "https://arxiv.org/abs/2211.09032",
+    "sha256": "5c273b5a2ff36b173e699ffe0d3314720e055462b4c836d536626a80e3053010",
+    "bytes": 1049046,
+    "redistributed": false
+  },
+  {
+    "id": "R24",
+    "reference": 19,
+    "title": "Query Drift Compensation: Enabling Compatibility in Continual Learning of Retrieval Embedding Models",
+    "source_url": "https://proceedings.mlr.press/v330/goswami26a.html",
+    "sha256": "f7ce3ac687fc65991a6f0ed1a16a91335b8a19d24cebe9501f99df8e7dcac73e",
+    "bytes": 2125604,
+    "redistributed": false
+  },
+  {
+    "id": "R25",
+    "reference": 20,
+    "title": "FastFill: Efficient Compatible Model Update",
+    "source_url": "https://arxiv.org/abs/2303.04766",
+    "sha256": "22570dc070cee7403abb57a95d5bfc7f77035f7c6c5bf3fcdd4254ef7c62844d",
+    "bytes": 7362775,
+    "redistributed": false
+  },
+  {
+    "id": "R12",
+    "reference": 21,
+    "title": "The Platonic Representation Hypothesis",
+    "source_url": "https://arxiv.org/abs/2405.07987",
+    "sha256": "fa9b7cc99c1e852960733b2ac89069bf448b2451bd198b4fc2d93aedb533e858",
+    "bytes": 3268833,
+    "redistributed": false
+  },
+  {
+    "id": "R13",
+    "reference": 22,
+    "title": "MTEB: Massive Text Embedding Benchmark",
+    "source_url": "https://arxiv.org/abs/2210.07316",
+    "sha256": "bfd15786180a6546e5bf1361fe42356a884517a6497c27ef6994f444be75e91f",
+    "bytes": 769075,
+    "redistributed": false
+  },
+  {
+    "id": "R14",
+    "reference": 23,
+    "title": "BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
+    "source_url": "https://arxiv.org/abs/2104.08663",
+    "sha256": "1925755aeb627123d1a63c66f02e5aa2432f7e92751a02bea7c8c3b6bbb6ec33",
+    "bytes": 2094824,
+    "redistributed": false
+  }
+]

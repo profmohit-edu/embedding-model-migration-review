@@ -1,0 +1,278 @@
+[
+  {
+    "marker": "TABLE1",
+    "caption": "Study-level comparison of the 20 core full texts. Descriptions concern this review’s selected evaluation role, not an exhaustive inventory of each paper.",
+    "headers": [
+      "Study",
+      "Mechanism and access",
+      "Measured target / stage",
+      "Interpretive boundary"
+    ],
+    "widths": [
+      0.16,
+      0.25,
+      0.25,
+      0.23
+    ],
+    "rows": [
+      [
+        "Shen Y et al. [1]",
+        "Training: old model and labelled training data.",
+        "task metric compared with old/old baseline; backfill-free endpoint.",
+        "Criterion is task- and dataset-specific; geometry alone is not the criterion."
+      ],
+      [
+        "Hu W et al. [2]",
+        "Training: embedding training and historical transformations.",
+        "intended and unintended consumer task performance; multiple versions.",
+        "Compatibility includes downstream consumers; it is not solely nearest-neighbour matching."
+      ],
+      [
+        "Zhang B et al. [3]",
+        "Mixed refresh: compatible training and gallery backfill.",
+        "retrieval and negative flips during refresh; partial refresh.",
+        "Mixed-gallery competition needs evaluation beyond the old-only endpoint."
+      ],
+      [
+        "Zhang B et al. [4]",
+        "Training: old/new training data, prototypes.",
+        "face retrieval under five data/class split settings; backfill-free endpoint.",
+        "Training-overlap regimes are part of the compatibility claim."
+      ],
+      [
+        "Gao AK [5]",
+        "Paired translation: paired text embeddings.",
+        "held-out cosine; manual search examples; post-hoc endpoint.",
+        "High average cosine and manual examples do not establish representative labelled retrieval performance."
+      ],
+      [
+        "Jha R et al. [6]",
+        "Unpaired translation: disjoint unpaired embedding collections.",
+        "counterpart matching, cosine and information extraction; post-hoc endpoint.",
+        "The threat-model and matching evidence should be distinguished from production query-document relevance."
+      ],
+      [
+        "Dar G [7]",
+        "Unpaired translation: unpaired embedding sets.",
+        "counterpart Top-1, average rank and cosine; post-hoc endpoint.",
+        "Counterpart identity is an explicit evaluation target, rather than independently judged relevance."
+      ],
+      [
+        "Byun J et al. [8]",
+        "Adapter training: pre-extracted embeddings; no backbone update.",
+        "multimodal task retrieval and preservation; backfill-free endpoint.",
+        "No backbone update does not imply no adapter training or support-data requirement."
+      ],
+      [
+        "Bui N et al. [9]",
+        "Training: model training and uncertainty-aware alignment.",
+        "compatibility experiments; model generations.",
+        "Old representations need not be equally reliable targets for preservation."
+      ],
+      [
+        "Schnaus D et al. [10]",
+        "Unpaired translation: disjoint unimodal embeddings; optional pairs.",
+        "geometric correspondence and semantic transfer; post-hoc endpoint.",
+        "Coarse shared structure and exact sample-level recovery are different evidence targets."
+      ],
+      [
+        "Ramanujan V et al. [11]",
+        "Forward preparation: side-information stored at earlier deployment.",
+        "CMC and mAP compatibility retrieval; prepared future update.",
+        "The method requires preparation that cannot be reconstructed from arbitrary legacy vectors by assumption."
+      ],
+      [
+        "Meng Q et al. [12]",
+        "Training: training and cross-model compatibility constraints.",
+        "cross-model retrieval / recognition; cross-model endpoint.",
+        "Transformation direction and direct compatibility should be recorded separately."
+      ],
+      [
+        "Goyal A et al. [13]",
+        "System evaluation: synthetic histories; two small open-weight models.",
+        "answer accuracy and diagnostic decomposition; partial/full embedding migration.",
+        "Evidence is controlled and synthetic, not an operational deployment guarantee."
+      ],
+      [
+        "Rozmus M et al. [14]",
+        "Score mapping: synthetic query-document pairs.",
+        "score mapping and threshold portability; threshold migration.",
+        "A score conversion does not itself supply vector compatibility or relevance labels."
+      ],
+      [
+        "Gu B et al. [15]",
+        "Index migration: new embeddings and old graph.",
+        "ANNS quality and migration efficiency; index rebuilding.",
+        "Graph reuse reduces index reconstruction work; it does not eliminate document re-embedding."
+      ],
+      [
+        "Ricci S et al. [16]",
+        "Post-hoc alignment: alignment data and fitted transformation.",
+        "downstream compatibility and representation preservation; post-hoc endpoint.",
+        "Adaptation and preservation form a trade-off rather than an identical objective."
+      ],
+      [
+        "Ricci S et al. [17]",
+        "Post-hoc interpolation: paired support embeddings and old/new queries.",
+        "Recall@K; support-selected and oracle weights distinguished; backfill-free endpoint.",
+        "Local margin certification is already prior work; no novelty claim is made for our elementary bound."
+      ],
+      [
+        "Biondi N et al. [18]",
+        "Lifelong training: sequential learning with stationarity constraints.",
+        "multi-model empirical compatibility; multiple versions.",
+        "Testing one adjacent update does not establish all historical cross-version pairs."
+      ],
+      [
+        "Goswami D et al. [19]",
+        "Query compensation: continual training, distillation and drift estimation.",
+        "document retrieval over sequential tasks; fixed old corpus index.",
+        "Text retrieval compatibility is directly studied; this review must not claim the area is unstudied."
+      ],
+      [
+        "Jaeckle F et al. [20]",
+        "Partial backfill: alignment and original gallery for partial backfill.",
+        "retrieval improvement over backfill progress; partial refresh.",
+        "Migration trajectory and selected backfill order are explicit parts of evaluation."
+      ]
+    ]
+  },
+  {
+    "marker": "TABLE2",
+    "caption": "Five evidence targets and the extra evidence required for broader claims. These are synthesis categories rather than a new metric taxonomy.",
+    "headers": [
+      "Target",
+      "Direct evidence",
+      "Additional question"
+    ],
+    "widths": [
+      0.22,
+      0.34,
+      0.36
+    ],
+    "rows": [
+      [
+        "Coordinate approximation",
+        "Mapped and target vectors of the same evaluated item; specify normalization and error distribution.",
+        "Do query-specific errors remain small relative to candidate margins?"
+      ],
+      [
+        "Same-item correspondence",
+        "A known counterpart is recovered from a specified distractor pool.",
+        "Are actual query-document relevance labels and distributions also tested?"
+      ],
+      [
+        "Task relevance",
+        "Labelled retrieval or consumer-task outcomes under specified model directions.",
+        "Are the new homogeneous reference, subgroups and intermediate states covered?"
+      ],
+      [
+        "Threshold behavior",
+        "Decision outcomes at a stated calibrated operating point.",
+        "Does recalibration preserve required error or utility on held-out labels?"
+      ],
+      [
+        "Serving-index fidelity",
+        "Approximate versus exact retrieval over identical vectors and filters.",
+        "Are the underlying ranking and operational cutover separately acceptable?"
+      ]
+    ]
+  },
+  {
+    "marker": "TABLE3",
+    "caption": "Closest prior contributions and the limited additional role of this synthesis. The comparison does not establish priority or completeness.",
+    "headers": [
+      "Prior contribution",
+      "Overlap acknowledged",
+      "Role of this review"
+    ],
+    "widths": [
+      0.24,
+      0.34,
+      0.34
+    ],
+    "rows": [
+      [
+        "BCT [1]; QDC [19]",
+        "Task-level new-to-old compatibility, including text retrieval in QDC.",
+        "Connect task tests to translation, calibration, index reuse and access constraints."
+      ],
+      [
+        "Hot-refresh [3]; FastFill [20]",
+        "Mixed-gallery regression and selective backfilling.",
+        "Retain trajectory as an independent obligation in a cross-family comparison."
+      ],
+      [
+        "vec2vec [6]; mini-vec2vec [7]",
+        "Unpaired translation, matching evidence and security implications.",
+        "Distinguish same-item matching from judged query-document relevance."
+      ],
+      [
+        "Score mapping [14]; graph migration [15]",
+        "Threshold portability and index-construction reuse.",
+        "Separate these interventions from avoiding document encoding."
+      ],
+      [
+        "Spherical interpolation [17]",
+        "Backward-compatible multimodal retrieval and local margin reasoning.",
+        "Use a conservative elementary bound only for exposition; claim no new margin theorem."
+      ],
+      [
+        "Operational runbooks [24-26]",
+        "Version isolation, re-embedding, validation and controlled cutover.",
+        "Link known operational practice to the research evidence targets and their non-implications."
+      ]
+    ]
+  },
+  {
+    "marker": "TABLE4",
+    "caption": "Proposed target-specific acceptance record. Numerical tolerances must be set for the application; no universal acceptance threshold is implied.",
+    "headers": [
+      "Claim",
+      "Required record",
+      "Failure to distinguish"
+    ],
+    "widths": [
+      0.22,
+      0.36,
+      0.34
+    ],
+    "rows": [
+      [
+        "Feasible intervention",
+        "Access to sources, weights, paired/unpaired support, side-information and old query encoders.",
+        "A method requiring unavailable resources appears deployable."
+      ],
+      [
+        "Vector / match quality",
+        "Direction; support/test split; dimensions; normalization; per-item errors; candidate pool.",
+        "Anchor success is interpreted as relevance or out-of-support performance."
+      ],
+      [
+        "Task compatibility",
+        "Old/old, new/new and deployed cross-version systems on paired held-out relevance queries.",
+        "Improvement over the old baseline is mistaken for full new-model recovery."
+      ],
+      [
+        "Trajectory stability",
+        "Refresh fraction and order, stable item population, query-level regressions.",
+        "Good homogeneous endpoints hide mixed-gallery failures."
+      ],
+      [
+        "Decision portability",
+        "Calibrated threshold or fusion rule, labels, acceptance/abstention outcomes.",
+        "Unchanged ordering is mistaken for unchanged decisions."
+      ],
+      [
+        "Search fidelity",
+        "Exact and approximate search on the same vectors, filters and search budgets.",
+        "Index approximation is confused with representation regression."
+      ],
+      [
+        "Practical acceptance",
+        "Encoding, fitting, storage, index-build and online costs; tested cutover and recovery.",
+        "Savings at one stage conceal cost or risk moved elsewhere."
+      ]
+    ]
+  }
+]

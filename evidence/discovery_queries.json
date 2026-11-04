@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-04",
+  "mode": "web discovery; no bibliographic database exports or total-hit counts retained",
+  "queries": [
+    "survey backward compatible text embeddings vector database migration embedding model upgrade review",
+    "\"embedding\" \"migration\" \"backward\" text retrieval paper",
+    "\"embedding\" \"upgrade\" \"survey\" retrieval compatibility",
+    "\"Vec2Vec\" embeddings alignment 2026",
+    "\"backward compatible\" embeddings survey review retrieval 2026",
+    "\"Backward-Compatible Representation Learning\" CVPR 2020",
+    "\"Hot-Refresh\" \"Model Upgrades\"",
+    "\"Harnessing the Universal Geometry of Embeddings\" arxiv",
+    "\"backward-compatible representation\" \"survey\"",
+    "\"compatible representation learning\" \"survey\"",
+    "\"embedding\" \"migration\" retrieval benchmark arxiv 2026",
+    "\"forward compatible\" \"embeddings\" representation learning",
+    "\"embedding model\" \"migration\" \"survey\"",
+    "\"backward compatibility\" \"survey\" \"retrieval\" embeddings",
+    "\"Embedding-model migration\" \"review\"",
+    "\"embedding\" \"compatibility\" \"systematic review\"",
+    "\"FastFill\" embedding backfill paper",
+    "\"embedding migration\" \"review\" \"alignment\" paper",
+    "\"Spherical Interpolation for Backward-Compatible\" arxiv",
+    "\"Query Drift Compensation\" \"survey\""
+  ],
+  "note": "Only embedding-topic discovery queries are listed; earlier rejected-topic exploration and journal-only checks are outside the review corpus. Citation following supplemented these searches."
+}
