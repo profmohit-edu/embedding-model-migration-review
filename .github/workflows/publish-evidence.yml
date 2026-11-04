@@ -1,16 +1,15 @@
 name: Publish and verify research evidence
-
 on:
   push:
     paths:
       - ".github/workflows/publish-evidence.yml"
       - "code/constructed_checks.py"
+      - "ESM_1_Embedding_Migration.zip"
+      - "ESM_1.zip"
       - "supplement/ESM_1.zip"
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   verify-and-publish:
     runs-on: ubuntu-latest
@@ -33,34 +32,37 @@ jobs:
           assert d['randomized_checks']['violations']==0
           print('PASS: 5000 constructed checks; 3338 certified; zero violations')
           PY
-      - name: Unpack and verify supplementary research evidence if uploaded
+      - name: Extract and validate uploaded evidence archive
         run: |
-          if [ -f supplement/ESM_1.zip ]; then
-            python3 - <<'PY'
-          import zipfile, pathlib, shutil, hashlib
-          p=pathlib.Path('supplement/ESM_1.zip')
-          with zipfile.ZipFile(p) as z:
-              assert z.testzip() is None
-              for name in z.namelist():
-                  path=pathlib.PurePosixPath(name)
-                  assert not path.is_absolute() and '..' not in path.parts
-                  if name.startswith(('evidence/','code/')) and not name.endswith('/'):
-                      dest=pathlib.Path(name)
-                      dest.parent.mkdir(parents=True,exist_ok=True)
-                      dest.write_bytes(z.read(name))
-          pathlib.Path('supplement/sha256.txt').write_text(
-              hashlib.sha256(p.read_bytes()).hexdigest()+'  ESM_1.zip\n')
+          python3 - <<'PY'
+          import pathlib,zipfile,hashlib
+          possible=[pathlib.Path('ESM_1_Embedding_Migration.zip'),pathlib.Path('ESM_1.zip'),pathlib.Path('supplement/ESM_1.zip')]
+          sources=[p for p in possible if p.exists()]
+          if sources:
+              p=sources[0]
+              with zipfile.ZipFile(p) as z:
+                  assert z.testzip() is None
+                  for name in z.namelist():
+                      path=pathlib.PurePosixPath(name)
+                      assert not path.is_absolute() and '..' not in path.parts
+                      if name.startswith(('evidence/','code/')) and not name.endswith('/'):
+                          dest=pathlib.Path(name)
+                          dest.parent.mkdir(parents=True,exist_ok=True)
+                          dest.write_bytes(z.read(name))
+              pathlib.Path('supplement').mkdir(exist_ok=True)
+              pathlib.Path('supplement/sha256.txt').write_text(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n')
+              print('Full supplementary archive extracted from',p)
+          else:
+              print('Full supplementary archive not yet uploaded; only constructed records available.')
           PY
-            python3 code/verify_supplement.py
-          else
-            echo 'Supplementary ZIP is not yet uploaded; only constructed checks are public.'
-          fi
-      - name: Commit publicly browsable evidence
+          if [ -f evidence/study_extraction.json ]; then python3 code/verify_supplement.py; fi
+      - name: Publish browsable results
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add evidence code supplement/sha256.txt 2>/dev/null || git add evidence code
+          git add evidence code
+          if [ -f supplement/sha256.txt ]; then git add supplement/sha256.txt; fi
           if ! git diff --cached --quiet; then
-            git commit -m "Publish verified study evidence and reproducibility results"
+            git commit -m "Publish verified research evidence and reproducibility results"
             git push
           fi
