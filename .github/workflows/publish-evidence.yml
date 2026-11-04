@@ -1,0 +1,66 @@
+name: Publish and verify research evidence
+
+on:
+  push:
+    paths:
+      - ".github/workflows/publish-evidence.yml"
+      - "code/constructed_checks.py"
+      - "supplement/ESM_1.zip"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Regenerate 5000 constructed checks
+        run: |
+          python3 code/constructed_checks.py > /tmp/constructed-checks.log
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          e=Path('evidence')
+          d=json.loads((e/'constructed_results.json').read_text())
+          cases=json.loads((e/'randomized_cases.json').read_text())
+          assert len(cases)==5000
+          assert d['randomized_checks']['certified_top3']==3338
+          assert d['randomized_checks']['uncertified_top3_changes']==667
+          assert d['randomized_checks']['violations']==0
+          print('PASS: 5000 constructed checks; 3338 certified; zero violations')
+          PY
+      - name: Unpack and verify supplementary research evidence if uploaded
+        run: |
+          if [ -f supplement/ESM_1.zip ]; then
+            python3 - <<'PY'
+          import zipfile, pathlib, shutil, hashlib
+          p=pathlib.Path('supplement/ESM_1.zip')
+          with zipfile.ZipFile(p) as z:
+              assert z.testzip() is None
+              for name in z.namelist():
+                  path=pathlib.PurePosixPath(name)
+                  assert not path.is_absolute() and '..' not in path.parts
+                  if name.startswith(('evidence/','code/')) and not name.endswith('/'):
+                      dest=pathlib.Path(name)
+                      dest.parent.mkdir(parents=True,exist_ok=True)
+                      dest.write_bytes(z.read(name))
+          pathlib.Path('supplement/sha256.txt').write_text(
+              hashlib.sha256(p.read_bytes()).hexdigest()+'  ESM_1.zip\n')
+          PY
+            python3 code/verify_supplement.py
+          else
+            echo 'Supplementary ZIP is not yet uploaded; only constructed checks are public.'
+          fi
+      - name: Commit publicly browsable evidence
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add evidence code supplement/sha256.txt 2>/dev/null || git add evidence code
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish verified study evidence and reproducibility results"
+            git push
+          fi
