@@ -1,0 +1,70 @@
+{
+  "provenance": "All vectors are constructed. No pretrained model, real query corpus, or deployment was evaluated.",
+  "examples": {
+    "A": {
+      "query_cosine": 0.9999980000006667,
+      "reference_scores": [
+        0.9999595002733742,
+        0.9999395006100392
+      ],
+      "mapped_scores": [
+        0.9999395006100392,
+        0.9999595002733742
+      ]
+    },
+    "B": {
+      "anchor_counterpart_top1": 1.0,
+      "heldout_query_reference_top1": 0,
+      "heldout_query_mapped_top1": 1,
+      "reference_query": [
+        0.9950041652780258,
+        0.09983341664682815
+      ],
+      "mapped_query": [
+        0.16996714290024104,
+        0.9854497299884601
+      ]
+    },
+    "C": {
+      "old_scores": [
+        0.9,
+        0.7,
+        0.2
+      ],
+      "new_scores": [
+        0.45,
+        0.35,
+        0.1
+      ],
+      "threshold": 0.8,
+      "old_accepts": 1,
+      "new_accepts": 0
+    },
+    "D": {
+      "old_old_scores": [
+        1.0,
+        0.9800665778412416
+      ],
+      "new_new_scores": [
+        0.9950041652780258,
+        0.9800665778412416
+      ],
+      "new_old_scores": [
+        0.9004471023526769,
+        0.7960837985490559
+      ],
+      "mixed_scores": [
+        0.9004471023526769,
+        0.9800665778412416
+      ]
+    }
+  },
+  "randomized_checks": {
+    "seed": 20261104,
+    "instances": 5000,
+    "certified_top3": 3338,
+    "uncertified_top3_changes": 667,
+    "maximum_score_error_to_bound_ratio": 0.9999861037738947,
+    "violations": 0
+  }
+}
