@@ -5,6 +5,7 @@ on:
       - ".github/workflows/publish-evidence.yml"
       - "code/constructed_checks.py"
       - "ESM_1_Embedding_Migration.zip"
+      - "ESM_1_GitHub_Upload.zip"
       - "ESM_1.zip"
       - "supplement/ESM_1.zip"
   workflow_dispatch:
@@ -36,7 +37,7 @@ jobs:
         run: |
           python3 - <<'PY'
           import pathlib,zipfile,hashlib
-          possible=[pathlib.Path('ESM_1_Embedding_Migration.zip'),pathlib.Path('ESM_1.zip'),pathlib.Path('supplement/ESM_1.zip')]
+          possible=[pathlib.Path('ESM_1_GitHub_Upload.zip'),pathlib.Path('ESM_1_Embedding_Migration.zip'),pathlib.Path('ESM_1.zip'),pathlib.Path('supplement/ESM_1.zip')]
           sources=[p for p in possible if p.exists()]
           if sources:
               p=sources[0]
