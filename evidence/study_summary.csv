@@ -1,0 +1,21 @@
+reference,study,intervention_family,measured_target,evidence_boundary
+1,Shen et al.,Compatible training,Retrieval task metric versus old-old baseline,Dataset-specific backfill-free endpoint
+2,Hu et al.,Compatible embedding training,Intended and unintended consumer performance,Multiple historical consumers not nearest-neighbour matching alone
+3,Zhang et al. Hot-Refresh,Mixed-gallery refresh,Retrieval negative flips during partial refresh,Endpoint results do not cover mixed-gallery competition
+4,Zhang et al. UniBCT,Compatible training,Face retrieval under five class-data regimes,Training overlap is part of the claim
+5,Gao Vec2Vec,Paired text-vector translation,Held-out cosine and manual search,Not representative judged retrieval
+6,Jha et al. vec2vec,Unpaired embedding translation,Counterpart matching cosine and information extraction,Counterpart identity distinct from relevance
+7,Dar mini-vec2vec,Unpaired embedding translation,Counterpart Top-1 average rank cosine,Identity matching is not judged relevance
+8,Byun et al. MKP-Adapter,Adapter training,Multimodal task retrieval and preservation,No backbone update still requires adapter training and support
+9,Bui et al.,Compatible training,Model-generation compatibility,Old representations vary in uncertainty
+10,Schnaus et al.,Unpaired cross-modal translation,Geometric correspondence and semantic transfer,Coarse geometry distinct from exact item recovery
+11,Ramanujan et al.,Forward-compatible preparation,CMC and mAP retrieval under anticipated update,Requires auxiliary information saved before upgrade
+12,Meng et al.,Compatibility-aware training,Cross-model retrieval and recognition,Direction and mapping must be specified
+13,Goyal and Ray,Controlled system evaluation,Answer accuracy and diagnostic decomposition,Synthetic history and small-model limit
+14,Rozmus and van der Putten,Score mapping,Threshold portability on synthetic pairs,Does not establish arbitrary vector compatibility
+15,Gu et al.,Graph-index migration,ANNS quality and graph migration cost,Index reuse does not eliminate re-embedding
+16,Ricci et al. Orthogonality,Post-hoc alignment,Compatibility and representation preservation,Alignment-preservation tradeoff
+17,Ricci et al. Spherical Interpolation,Post-hoc interpolation,Recall at K and local margin analyses,Oracle selection and support selection must be distinguished
+18,Biondi et al. CL2R,Lifelong compatible training,Historical multi-model compatibility,Adjacent updates do not guarantee all generations
+19,Goswami et al. QDC,Query drift compensation,Sequential continual text retrieval on fixed index,Direct text retrieval compatibility is prior art
+20,Jaeckle et al. FastFill,Partial backfill with alignment,Retrieval gains over backfill progress,Refresh fraction and order affect trajectory
